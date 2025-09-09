@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: govdoc-ai-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app:app --host 0.0.0.0 --port $PORT"
+    plan: free
+    autoDeploy: true
+    repo: <YOUR_GITHUB_REPO_URL>
+    
+  - type: web
+    name: govdoc-ai-frontend
+    env: node
+    buildCommand: "npm install && npm run build"
+    startCommand: "serve -s dist -l $PORT"
+    plan: free
+    autoDeploy: true
+    repo: <YOUR_GITHUB_REPO_URL>

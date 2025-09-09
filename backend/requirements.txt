@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pymongo
+python-dotenv
+pydantic
+langchain
+chromadb
+transformers
+torch
+pdfplumber
+loguru
