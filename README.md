@@ -86,26 +86,30 @@ govdoc-ai/
 
 ---
 
+---
+
 ## 💻 Local Setup
 
 ### Backend
-```bash
+
 cd backend
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
+# source venv/bin/activate # Linux/Mac
 pip install -r requirements.txt
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 
 
 
-Frontend
+
+### Frontend
 
 cd frontend
 npm install
 npm run dev
 
 
-Docker
+### Docker
 
 docker-compose up --build
+
